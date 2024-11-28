@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+/* global reset  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* global style  */
+:root {
+  --primary-color: rgb(39 174 96);
+  --secondary-color: rgb(22 160 133);
+  --normal-text: rgb(52 73 94);
+}
+
+html {
+  direction: rtl;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+.primary-color {
+  color: var(--secondary-color);
+}
+
+.primary-background {
+  background-color: var(--primary-color);
+}
+
+.secondary-background {
+  background-color: var(--secondary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.text-color {
+  color: var(--normal-text);
+}
+
+.copyrights h3 {
+  font-size: 15px;
+}
+
+button {
+  padding-block: 7px !important;
+}
+
+button:hover {
+  background-color: var(--primary-color) !important;
+}
+
+input {
+  border: 2px solid var(--secondary-color);
+  opacity: 0.6;
+  padding-inline: 10px;
+  padding-block: 2px;
+}
+
+table {
+  display: none;
+}
