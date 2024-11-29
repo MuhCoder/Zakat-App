@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 
-/* global reset  */
+/* ================================================
+   Global Reset
+   ================================================ */
 *,
 *::before,
 *::after {
@@ -9,27 +11,33 @@
   padding: 0;
 }
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+/* Remove number input spinner (all browsers) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
 }
 
+/* Reset paragraph styles */
 p {
   all: unset;
 }
 
-/* global style  */
+h5 {
+  font-size: 15px;
+}
+
+/* ================================================
+   Global Styles
+   ================================================ */
 :root {
-  --primary-color: rgb(39 174 96);
-  --secondary-color: rgb(22 160 133);
-  --normal-text: rgb(52 73 94);
+  --primary-color: rgb(39, 174, 96);
+  --secondary-color: rgb(22, 160, 133);
+  --normal-text: rgb(52, 73, 94);
 }
 
 html {
@@ -38,26 +46,14 @@ html {
 
 body {
   font-family: "Cairo", sans-serif;
-}
-
-body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-link:hover {
-  color: var(--secondary-color);
-}
-
+/* ================================================
+   Utility Classes
+   ================================================ */
 .primary-color {
-  color: var(--secondary-color);
-}
-
-.primary-background {
-  background-color: var(--primary-color);
-}
-
-.secondary-background {
-  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .secondary-color {
@@ -68,8 +64,39 @@ body {
   color: var(--normal-text);
 }
 
-.openSrouce * {
-  font-size: 15px;
+.primary-background {
+  background-color: var(--primary-color);
+}
+
+.secondary-background {
+  background-color: var(--secondary-color);
+}
+
+.nav-link:hover {
+  color: var(--secondary-color);
+}
+
+button {
+  padding: 1rem 1rem; /* Use rem for scalability */
+  transition: background-color 0.3s; /* Add smooth hover effect */
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+input {
+  border: 2px solid var(--secondary-color);
+  opacity: 0.6;
+  padding: 0.2rem 0.7rem; /* Use consistent padding */
+  border-radius: 4px; /* Add subtle rounding for aesthetics */
+}
+
+/* ================================================
+   Component Styles
+   ================================================ */
+.openSource * {
+  font-size: 0.9375rem; /* Use rem for consistency (15px) */
 }
 
 .mainApp {
@@ -78,25 +105,17 @@ body {
 
 .copyrights {
   height: 50px;
-}
-
-button {
-  padding-block: 7px !important;
-}
-
-button:hover {
-  background-color: var(--primary-color) !important;
-}
-
-input {
-  border: 2px solid var(--secondary-color);
-  opacity: 0.6;
-  padding-inline: 10px;
-  padding-block: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center align content */
 }
 
 table {
-  display: none;
+  display: none; /* Consider using `visibility: hidden` if you plan to show it later */
+}
+
+#amount {
+  color: var(--primary-color);
 }
 
 #wrong {
