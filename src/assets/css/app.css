@@ -21,6 +21,10 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+p {
+  all: unset;
+}
+
 /* global style  */
 :root {
   --primary-color: rgb(39 174 96);
@@ -34,6 +38,14 @@ html {
 
 body {
   font-family: "Cairo", sans-serif;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color);
 }
 
 .primary-color {
@@ -56,8 +68,16 @@ body {
   color: var(--normal-text);
 }
 
-.copyrights h3 {
+.openSrouce * {
   font-size: 15px;
+}
+
+.mainApp {
+  min-height: calc(100vh - 106px);
+}
+
+.copyrights {
+  height: 50px;
 }
 
 button {
@@ -76,5 +96,13 @@ input {
 }
 
 table {
+  display: none;
+}
+
+#wrong {
+  background-color: #fddfdf;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 10px;
   display: none;
 }

@@ -1,0 +1,34 @@
+
+let primaryInput = document.getElementById("mainInput");
+let primaryButton = document.getElementById("mainButton");
+let inputedAmount = document.getElementById("sendNumber");
+let finalAmount = document.getElementById("amount");
+let tableBlock = document.getElementById("finalResult");
+document.querySelector("p:nth-of-type(2)").setAttribute("id", "wrong");
+let wrongMessage = document.getElementById("wrong");
+
+primaryButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  let zakatAmount = parseFloat(primaryInput.value);
+
+  if (!isNaN(zakatAmount) && zakatAmount > 0) {
+    let finalZakat = zakatAmount * 0.025;
+    finalAmount.innerText = finalZakat.toFixed(2);
+    inputedAmount.innerText = zakatAmount;
+    tableBlock.style.display = "block";
+    wrongMessage.style.display = "none";
+  } else {
+    wrongMessage.innerText = `هذا العدد لا تجب فيه الزكاة.`;
+    wrongMessage.style.display = "block";
+    tableBlock.style.display = "none";
+  }
+});
+
+window.onload = () => {
+  let allInputs = document.querySelectorAll("input");
+  allInputs.forEach((input) => {
+    input.value = "";
+    wrongMessage.style.display = "none";
+    tableBlock.style.display = "none";
+  });
+};
