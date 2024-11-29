@@ -36,4 +36,4 @@ This is a simple **Zakat Calculator App** designed for beginners learning JavaSc
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/zakat-calculator.git
+   git clone https://github.com/MuhCoder/Zakat-App.git
